@@ -1,8 +1,16 @@
-[gd_scene format=3 uid="uid://cnwtihubsajyw"]
+[gd_scene load_steps=3 format=3 uid="uid://cnwtihubsajyw"]
+
+[ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_gjccq"]
+[ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="2_bm47o"]
 
 [node name="Former" type="Node"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1170.0
-offset_bottom = 682.0
-color = Color(0.854902, 0.658824, 0.454902, 1)
+[node name="360F44540911Qcdkx0tEkoDp56Xtnwtl5sXeXzIiunvB" type="Sprite2D" parent="."]
+position = Vector2(581, 354)
+scale = Vector2(2.67292, 2.05278)
+texture = ExtResource("1_gjccq")
+
+[node name="Light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector" type="Sprite2D" parent="."]
+position = Vector2(572, 116)
+scale = Vector2(0.507387, 0.157143)
+texture = ExtResource("2_bm47o")
