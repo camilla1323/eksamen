@@ -1,16 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnwtihubsajyw"]
+[gd_scene load_steps=5 format=3 uid="uid://cnwtihubsajyw"]
 
 [ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_gjccq"]
 [ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="2_bm47o"]
+[ext_resource type="PackedScene" uid="uid://c5rlaf4m5pfti" path="res://trekant_form.tscn" id="3_2knxu"]
+[ext_resource type="PackedScene" uid="uid://ntkmk3gig41b" path="res://firkant_form.tscn" id="4_is548"]
 
 [node name="Former" type="Node"]
 
-[node name="360F44540911Qcdkx0tEkoDp56Xtnwtl5sXeXzIiunvB" type="Sprite2D" parent="."]
+[node name="Baggrund" type="Sprite2D" parent="."]
 position = Vector2(581, 354)
 scale = Vector2(2.67292, 2.05278)
 texture = ExtResource("1_gjccq")
 
-[node name="Light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector" type="Sprite2D" parent="."]
+[node name="Boks" type="Sprite2D" parent="."]
 position = Vector2(572, 116)
 scale = Vector2(0.507387, 0.157143)
 texture = ExtResource("2_bm47o")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 97.0
+offset_top = 182.0
+offset_right = 1050.0
+offset_bottom = 412.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "Træk formerne ovenover ned til deres plads"
+
+[node name="Trekant" parent="." instance=ExtResource("3_2knxu")]
+position = Vector2(234, 113)
+
+[node name="Firkant" parent="." instance=ExtResource("4_is548")]
+position = Vector2(364, 114)
