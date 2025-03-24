@@ -18,7 +18,7 @@ func _on_button_button_up() -> void:
 	check_snap()
 
 func check_snap():
-	for area in get_tree().get_nodes_in_group("sort_trekant"): # Skift til den rigtige gruppe
+	for area in get_tree().get_nodes_in_group("sort_rektangel"): # Skift til den rigtige gruppe
 		if global_position.distance_to(area.global_position) < 80:  # Snap-afstand
 			global_position = area.global_position
 			return  # Stop efter første match

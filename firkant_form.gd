@@ -15,9 +15,10 @@ func _on_button_button_down() -> void:
 
 func _on_button_button_up() -> void:
 	dragging = false
-	
-func get_form_type():
-	return "firkant"  # Skift i andre formers scripts
+	check_snap()
 
-func snap_to_position(target_position):
-	global_position = target_position
+func check_snap():
+	for area in get_tree().get_nodes_in_group("sort_firkant"): # Skift til den rigtige gruppe
+		if global_position.distance_to(area.global_position) < 80:  # Snap-afstand
+			global_position = area.global_position
+			return  # Stop efter første match

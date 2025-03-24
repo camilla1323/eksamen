@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl0ygd76y3r1s"]
+
+[ext_resource type="Texture2D" uid="uid://c7r8shlm3vnxt" path="res://art/Former/Page 6.png" id="1_jhcxr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ko17e"]
+radius = 302.47
+
+[node name="SortRektangelBoks" type="Sprite2D"]
+self_modulate = Color(0, 0, 0, 0.705882)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("1_jhcxr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.48788e-05, -4.48788e-05)
+shape = SubResource("CircleShape2D_ko17e")

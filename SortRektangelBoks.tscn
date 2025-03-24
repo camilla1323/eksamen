@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://2lljmc2pcfq0"]
+
+[ext_resource type="Texture2D" uid="uid://dplqscwg3a1m" path="res://art/Former/Page 5.png" id="1_2tnaw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cabvx"]
+size = Vector2(964.706, 564.706)
+
+[node name="SortRektangelBoks" type="Sprite2D"]
+self_modulate = Color(0, 0, 0, 0.705882)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("1_2tnaw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.48788e-05, -4.48788e-05)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_cabvx")
