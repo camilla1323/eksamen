@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://ntkmk3gig41b"]
+[gd_scene load_steps=4 format=3 uid="uid://ntkmk3gig41b"]
 
 [ext_resource type="Texture2D" uid="uid://bf4ppkup3mfku" path="res://art/Former/Page 1.png" id="1_luh32"]
 [ext_resource type="Script" path="res://firkant_form.gd" id="1_sq57t"]
 
+[sub_resource type="GDScript" id="GDScript_67seg"]
+script/source = "extends Area2D
+
+@export var form_type: String = \"Firkant\"
+
+func get_form_type():
+	return form_type
+"
+
 [node name="Firkant" type="Sprite2D"]
-position = Vector2(250, 142.375)
-scale = Vector2(0.164815, 0.171528)
+position = Vector2(253.95, 142.375)
+scale = Vector2(0.172315, 0.172)
 texture = ExtResource("1_luh32")
 script = ExtResource("1_sq57t")
 
@@ -20,6 +29,9 @@ offset_left = -558.04
 offset_top = -565.12
 offset_right = -516.56
 offset_bottom = -528.6
+
+[node name="Area2D" type="Area2D" parent="."]
+script = SubResource("GDScript_67seg")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

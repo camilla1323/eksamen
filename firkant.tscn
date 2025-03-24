@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://sv6lbb0sbhmi"]
+
+[ext_resource type="Script" path="res://firkant.gd" id="1_qrdtt"]
+[ext_resource type="Texture2D" uid="uid://bf4ppkup3mfku" path="res://art/Former/Page 1.png" id="2_dm7le"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7flek"]
+radius = 347.922
+
+[node name="firkant" type="Node2D"]
+script = ExtResource("1_qrdtt")
+
+[node name="Page1" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_dm7le")
+
+[node name="Area2D" type="Area2D" parent="Page1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Page1/Area2D"]
+shape = SubResource("CircleShape2D_7flek")
+
+[connection signal="input_event" from="Page1/Area2D" to="." method="_on_area_2d_input_event"]

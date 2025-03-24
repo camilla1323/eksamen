@@ -15,3 +15,9 @@ func _on_button_button_down() -> void:
 
 func _on_button_button_up() -> void:
 	dragging = false
+	
+func get_form_type():
+	return "firkant"  # Skift i andre formers scripts
+
+func snap_to_position(target_position):
+	global_position = target_position
