@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpiayblbnk0or"]
+
+[ext_resource type="Texture2D" uid="uid://c5344fu6gm5hu" path="res://art/Former/Page 3.png" id="1_1vwen"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_li0ua"]
+radius = 327.727
+
+[node name="Sprite2D" type="Sprite2D"]
+self_modulate = Color(0, 0, 0, 0.705882)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("1_1vwen")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_li0ua")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4k212ccp20hx"]
+
+[ext_resource type="Texture2D" uid="uid://c5344fu6gm5hu" path="res://art/Former/Page 3.png" id="1_g0e8h"]
+[ext_resource type="Script" path="res://cirkel_form.gd" id="2_7j02n"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_g0e8h")
+script = ExtResource("2_7j02n")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.248
+anchor_top = 0.206
+anchor_right = 0.794
+anchor_bottom = 0.781
+offset_left = -267.84
+offset_top = -222.48
+offset_right = -849.52
+offset_bottom = -835.48
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

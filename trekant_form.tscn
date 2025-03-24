@@ -4,8 +4,7 @@
 [ext_resource type="Script" path="res://trekant_form.gd" id="2_uh1fv"]
 
 [node name="Trekant" type="Sprite2D"]
-position = Vector2(250, 142.375)
-scale = Vector2(0.164815, 0.171528)
+scale = Vector2(0.144, 0.15)
 texture = ExtResource("1_htjb5")
 script = ExtResource("2_uh1fv")
 
