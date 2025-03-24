@@ -1,10 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://p5ieq62r7non"]
 
-[ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_8svv7"]
+[ext_resource type="PackedScene" uid="uid://dblt0lm7cc7eo" path="res://flytningdyr.tscn" id="1_4sfnc"]
 
 [node name="Node2D" type="Node"]
 
-[node name="360F44540911Qcdkx0tEkoDp56Xtnwtl5sXeXzIiunvB" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(2.4, 1.8)
-texture = ExtResource("1_8svv7")
+[node name="Node2D" parent="." instance=ExtResource("1_4sfnc")]
