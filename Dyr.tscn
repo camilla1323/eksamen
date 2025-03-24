@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://p5ieq62r7non"]
+[gd_scene load_steps=2 format=3 uid="uid://p5ieq62r7non"]
+
+[ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_8svv7"]
 
 [node name="Node2D" type="Node"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.854902, 0.658824, 0.454902, 1)
+[node name="360F44540911Qcdkx0tEkoDp56Xtnwtl5sXeXzIiunvB" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(2.4, 1.8)
+texture = ExtResource("1_8svv7")
