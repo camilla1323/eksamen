@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://0d7ih1g2t8s3"]
+
+[ext_resource type="Texture2D" uid="uid://dplqscwg3a1m" path="res://art/Former/Page 5.png" id="1_h3qty"]
+[ext_resource type="Script" path="res://rektangel_form.gd" id="2_oydsu"]
+
+[node name="Rektangel" type="Sprite2D"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_h3qty")
+script = ExtResource("2_oydsu")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.144
+anchor_top = 0.269
+anchor_right = 0.887
+anchor_bottom = 0.74
+offset_left = -622.52
+offset_top = -570.52
+offset_right = -484.96
+offset_bottom = -519.2
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

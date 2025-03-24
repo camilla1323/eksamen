@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5rlaf4m5pfti"]
+[gd_scene load_steps=3 format=3 uid="uid://wo25pjcsq6ux"]
 
-[ext_resource type="Texture2D" uid="uid://dphba25lywtvr" path="res://art/Former/Page 2.png" id="1_htjb5"]
-[ext_resource type="Script" path="res://trekant_form.gd" id="2_uh1fv"]
+[ext_resource type="Texture2D" uid="uid://c7r8shlm3vnxt" path="res://art/Former/Page 6.png" id="1_kyehk"]
+[ext_resource type="Script" path="res://stjerne_form.gd" id="2_y4rw5"]
 
-[node name="Trekant" type="Sprite2D"]
-scale = Vector2(0.144, 0.15)
-texture = ExtResource("1_htjb5")
-script = ExtResource("2_uh1fv")
+[node name="Firkant" type="Sprite2D"]
+position = Vector2(253.95, 142.375)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_kyehk")
+script = ExtResource("2_y4rw5")
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -19,7 +20,6 @@ offset_left = -558.04
 offset_top = -565.12
 offset_right = -516.56
 offset_bottom = -528.6
-metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
