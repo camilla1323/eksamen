@@ -1,0 +1,160 @@
+[gd_scene load_steps=9 format=3 uid="uid://dblt0lm7cc7eo"]
+
+[ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_xv1jd"]
+[ext_resource type="PackedScene" uid="uid://77k1wab2pa" path="res://dyr_spil.tscn" id="2_nkcvn"]
+[ext_resource type="Texture2D" uid="uid://sg7a35e5igq2" path="res://art/Dyr til programmering. /Page 2.jpeg" id="3_mboms"]
+[ext_resource type="Texture2D" uid="uid://crjxd0ok44k3d" path="res://art/Dyr til programmering. /Page 1.jpeg" id="4_kes46"]
+[ext_resource type="Texture2D" uid="uid://hq6qst07b42r" path="res://art/Dyr til programmering. /Page 3.jpeg" id="5_kaaaf"]
+[ext_resource type="Texture2D" uid="uid://e4gbwr0by4m7" path="res://art/Dyr til programmering. /Page 4.jpeg" id="6_2c4vw"]
+[ext_resource type="Texture2D" uid="uid://bwovv3p4kid06" path="res://art/Dyr til programmering. /Page 5.jpeg" id="7_lj2gy"]
+[ext_resource type="Texture2D" uid="uid://cd01fd51rv7dp" path="res://art/Dyr til programmering. /Page 6.jpeg" id="8_ekjky"]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(0.994075, 0.974315)
+
+[node name="360F44540911Qcdkx0tEkoDp56Xtnwtl5sXeXzIiunvB" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(2.4, 1.8)
+texture = ExtResource("1_xv1jd")
+
+[node name="ColorRect" type="ColorRect" parent="360F44540911Qcdkx0tEkoDp56Xtnwtl5sXeXzIiunvB"]
+modulate = Color(1, 1, 1, 0.545)
+offset_left = -219.0
+offset_top = -146.0
+offset_right = 216.0
+offset_bottom = -57.0
+
+[node name="Kofigur" parent="." instance=ExtResource("2_nkcvn")]
+offset_left = 89.5305
+offset_top = 86.2144
+offset_right = 222.53
+offset_bottom = 202.214
+texture = ExtResource("3_mboms")
+
+[node name="Koplads" parent="." instance=ExtResource("2_nkcvn")]
+self_modulate = Color(1, 1, 1, 0.294118)
+offset_left = 355.104
+offset_top = 400.281
+offset_right = 486.104
+offset_bottom = 516.281
+tooltip_text = "
+
+"
+
+[node name="Label" type="Label" parent="Koplads"]
+layout_mode = 0
+offset_left = 53.3159
+offset_top = 45.1599
+offset_right = 83.3159
+offset_bottom = 70.1599
+text = "Ko"
+
+[node name="Hestfigur" parent="." instance=ExtResource("2_nkcvn")]
+offset_left = 428.539
+offset_top = 86.2144
+offset_right = 561.539
+offset_bottom = 202.214
+texture = ExtResource("4_kes46")
+
+[node name="Hestplads" parent="." instance=ExtResource("2_nkcvn")]
+self_modulate = Color(1, 1, 1, 0.294118)
+offset_left = 516.058
+offset_top = 396.176
+offset_right = 647.058
+offset_bottom = 512.176
+
+[node name="Label" type="Label" parent="Hestplads"]
+layout_mode = 0
+offset_left = 46.2742
+offset_top = 47.2127
+offset_right = 86.2742
+offset_bottom = 70.2127
+text = "Hest"
+
+[node name="Fårfigur" parent="." instance=ExtResource("2_nkcvn")]
+offset_left = 598.546
+offset_top = 87.2408
+offset_right = 731.546
+offset_bottom = 203.241
+texture = ExtResource("5_kaaaf")
+
+[node name="Fårplads" parent="." instance=ExtResource("2_nkcvn")]
+self_modulate = Color(1, 1, 1, 0.294118)
+offset_left = 676.005
+offset_top = 394.123
+offset_right = 807.005
+offset_bottom = 510.123
+
+[node name="Label" type="Label" parent="Fårplads"]
+layout_mode = 0
+offset_left = 51.304
+offset_top = 47.2127
+offset_right = 91.304
+offset_bottom = 70.2127
+text = "Får"
+
+[node name="Fuglfigur" parent="." instance=ExtResource("2_nkcvn")]
+offset_left = 930.513
+offset_top = 87.2408
+offset_right = 1063.51
+offset_bottom = 203.241
+texture = ExtResource("7_lj2gy")
+
+[node name="Fuglplads" parent="." instance=ExtResource("2_nkcvn")]
+self_modulate = Color(1, 1, 1, 0.294118)
+offset_left = 513.04
+offset_top = 261.722
+offset_right = 644.04
+offset_bottom = 377.722
+
+[node name="Label" type="Label" parent="Fuglplads"]
+layout_mode = 0
+offset_left = 45.2682
+offset_top = 47.2126
+offset_right = 85.2682
+offset_bottom = 70.2126
+text = "Fugl"
+
+[node name="Grisfigur" parent="." instance=ExtResource("2_nkcvn")]
+offset_left = 261.55
+offset_top = 84.1617
+offset_right = 394.55
+offset_bottom = 200.162
+texture = ExtResource("8_ekjky")
+
+[node name="Grisplads" parent="." instance=ExtResource("2_nkcvn")]
+self_modulate = Color(1, 1, 1, 0.294118)
+offset_left = 676.005
+offset_top = 261.722
+offset_right = 807.005
+offset_bottom = 377.722
+
+[node name="Label" type="Label" parent="Grisplads"]
+layout_mode = 0
+offset_left = 49.292
+offset_top = 47.2126
+offset_right = 89.292
+offset_bottom = 70.2126
+text = "Gris"
+
+[node name="Hundfigur" parent="." instance=ExtResource("2_nkcvn")]
+offset_left = 765.536
+offset_top = 89.2935
+offset_right = 898.536
+offset_bottom = 205.294
+texture = ExtResource("6_2c4vw")
+
+[node name="Hundplads" parent="." instance=ExtResource("2_nkcvn")]
+self_modulate = Color(1, 1, 1, 0.294118)
+offset_left = 355.104
+offset_top = 262.749
+offset_right = 486.104
+offset_bottom = 378.749
+
+[node name="Label" type="Label" parent="Hundplads"]
+layout_mode = 0
+offset_left = 43.2563
+offset_top = 45.16
+offset_right = 86.2563
+offset_bottom = 68.16
+text = "Hund"
