@@ -1,0 +1,112 @@
+[gd_scene load_steps=16 format=3 uid="uid://c1slt7nrl1gfc"]
+
+[ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_fgcos"]
+[ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="2_fo2m2"]
+[ext_resource type="PackedScene" uid="uid://cb27xncrrmin" path="res://1_tal.tscn" id="3_130t8"]
+[ext_resource type="PackedScene" uid="uid://boof24vq685bd" path="res://SortFirkantBoks.tscn" id="3_q532l"]
+[ext_resource type="PackedScene" uid="uid://dhv6ajb74ao6w" path="res://2_tal.tscn" id="4_kplsi"]
+[ext_resource type="PackedScene" uid="uid://gnl46u7hretr" path="res://3_tal.tscn" id="5_a8i0v"]
+[ext_resource type="Texture2D" uid="uid://boc5st33huoxq" path="res://art/Tal/banan.png" id="6_3ve3j"]
+[ext_resource type="Texture2D" uid="uid://3ts0pcsp6bui" path="res://art/Tal/kirsebær.png" id="7_vy7vi"]
+[ext_resource type="Texture2D" uid="uid://ci7n4e154cmk8" path="res://art/Tal/æble.png" id="8_majjj"]
+[ext_resource type="PackedScene" uid="uid://buqb5fach7oo" path="res://6_tal.tscn" id="10_siq4g"]
+[ext_resource type="PackedScene" uid="uid://ce7rfpnf8jto2" path="res://5_tal.tscn" id="11_l10e0"]
+[ext_resource type="PackedScene" uid="uid://bcc8df7cwt8py" path="res://4_tal.tscn" id="12_libkv"]
+[ext_resource type="Texture2D" uid="uid://bfhm5vn12kmwi" path="res://art/Tal/jordbær.png" id="13_pas5t"]
+[ext_resource type="Texture2D" uid="uid://cv2xp66he73ab" path="res://art/Tal/brombær.png" id="14_mk8w4"]
+[ext_resource type="Texture2D" uid="uid://dkoxyliyf38ap" path="res://art/Tal/fersken.png" id="15_8164b"]
+
+[node name="Former" type="Node"]
+
+[node name="Baggrund" type="Sprite2D" parent="."]
+position = Vector2(581, 354)
+scale = Vector2(2.67292, 2.05278)
+texture = ExtResource("1_fgcos")
+
+[node name="Boks" type="Sprite2D" parent="."]
+position = Vector2(572, 116)
+scale = Vector2(0.507387, 0.157143)
+texture = ExtResource("2_fo2m2")
+
+[node name="Tekst" type="Label" parent="."]
+offset_left = 117.0
+offset_top = 180.0
+offset_right = 1070.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "Træk tallene ovenover ned til deres plads"
+
+[node name="Æble" type="Sprite2D" parent="."]
+position = Vector2(902, 508)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_majjj")
+
+[node name="Banan" type="Sprite2D" parent="."]
+position = Vector2(83, 312)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_3ve3j")
+
+[node name="Kirsebær" type="Sprite2D" parent="."]
+position = Vector2(165, 493)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_vy7vi")
+
+[node name="Jordbær" type="Sprite2D" parent="."]
+position = Vector2(811, 279)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("13_pas5t")
+
+[node name="Brombær" type="Sprite2D" parent="."]
+position = Vector2(515, 517)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("14_mk8w4")
+
+[node name="Fersken" type="Sprite2D" parent="."]
+position = Vector2(471, 299)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("15_8164b")
+
+[node name="BananBoks" parent="." groups=["banan"] instance=ExtResource("3_q532l")]
+position = Vector2(187, 328)
+scale = Vector2(0.154444, 0.213704)
+
+[node name="KirsebærBoks" parent="." groups=["kirsebær"] instance=ExtResource("3_q532l")]
+position = Vector2(288, 535)
+scale = Vector2(0.154444, 0.213704)
+
+[node name="ÆbleBoks" parent="." groups=["æble"] instance=ExtResource("3_q532l")]
+position = Vector2(1028, 521)
+scale = Vector2(0.154444, 0.213704)
+
+[node name="BrombærBoks" parent="." groups=["brombær"] instance=ExtResource("3_q532l")]
+position = Vector2(667, 519)
+scale = Vector2(0.154444, 0.213704)
+
+[node name="FerskenBoks" parent="." groups=["fersken"] instance=ExtResource("3_q532l")]
+position = Vector2(603, 324)
+scale = Vector2(0.154444, 0.213704)
+
+[node name="JordbærBoks" parent="." groups=["jordbær"] instance=ExtResource("3_q532l")]
+position = Vector2(944, 327)
+scale = Vector2(0.154444, 0.213704)
+
+[node name="1-tal" parent="." instance=ExtResource("3_130t8")]
+position = Vector2(220, 102)
+
+[node name="2-tal" parent="." instance=ExtResource("4_kplsi")]
+position = Vector2(340, 104)
+
+[node name="3-tal" parent="." instance=ExtResource("5_a8i0v")]
+position = Vector2(502, 107)
+
+[node name="4-tal" parent="." instance=ExtResource("12_libkv")]
+position = Vector2(632, 104)
+
+[node name="5-tal" parent="." instance=ExtResource("11_l10e0")]
+position = Vector2(770, 110)
+
+[node name="6-tal" parent="." instance=ExtResource("10_siq4g")]
+position = Vector2(905, 107)

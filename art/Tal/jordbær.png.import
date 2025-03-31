@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sg7a35e5igq2"
-path="res://.godot/imported/Page2.jpeg-127abc5094101d2ea7173ba6e0c6be40.ctex"
+uid="uid://bfhm5vn12kmwi"
+path="res://.godot/imported/jordbær.png-fb1dd0cc0af74158b9f3ed149dce66de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Dyr/Page2.jpeg"
-dest_files=["res://.godot/imported/Page2.jpeg-127abc5094101d2ea7173ba6e0c6be40.ctex"]
+source_file="res://art/Tal/jordbær.png"
+dest_files=["res://.godot/imported/jordbær.png-fb1dd0cc0af74158b9f3ed149dce66de.ctex"]
 
 [params]
 

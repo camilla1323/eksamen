@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://buqb5fach7oo"]
+
+[ext_resource type="Texture2D" uid="uid://d2te707uae4nx" path="res://art/Tal/6.png" id="1_ljmnm"]
+[ext_resource type="Script" path="res://6_tal.gd" id="2_pgmcp"]
+
+[node name="6-tal" type="Sprite2D"]
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("1_ljmnm")
+script = ExtResource("2_pgmcp")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.385
+anchor_top = 0.435
+anchor_right = 0.644
+anchor_bottom = 0.867
+offset_left = -543.073
+offset_top = -560.709
+offset_right = -522.793
+offset_bottom = -523.269
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
