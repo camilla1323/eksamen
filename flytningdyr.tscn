@@ -1,14 +1,33 @@
-[gd_scene load_steps=10 format=3 uid="uid://dblt0lm7cc7eo"]
+[gd_scene load_steps=17 format=3 uid="uid://dblt0lm7cc7eo"]
 
 [ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_xv1jd"]
 [ext_resource type="PackedScene" uid="uid://77k1wab2pa" path="res://dyr_spil.tscn" id="2_nkcvn"]
-[ext_resource type="Texture2D" path="res://art/Dyr til programmering. /Page 2.jpeg" id="3_mboms"]
-[ext_resource type="Texture2D" path="res://art/Dyr til programmering. /Page 1.jpeg" id="4_kes46"]
-[ext_resource type="Texture2D" path="res://art/Dyr til programmering. /Page 3.jpeg" id="5_kaaaf"]
-[ext_resource type="Texture2D" path="res://art/Dyr til programmering. /Page 4.jpeg" id="6_2c4vw"]
-[ext_resource type="Texture2D" path="res://art/Dyr til programmering. /Page 5.jpeg" id="7_lj2gy"]
-[ext_resource type="Texture2D" path="res://art/Dyr til programmering. /Page 6.jpeg" id="8_ekjky"]
+[ext_resource type="Texture2D" uid="uid://sg7a35e5igq2" path="res://art/Dyr/Page2.jpeg" id="3_wnakq"]
+[ext_resource type="Texture2D" uid="uid://crjxd0ok44k3d" path="res://art/Dyr/Page1.jpeg" id="4_jllfj"]
+[ext_resource type="Texture2D" uid="uid://hq6qst07b42r" path="res://art/Dyr/Page3.jpeg" id="5_boamj"]
+[ext_resource type="Script" path="res://rektangel_form.gd" id="5_eol7e"]
+[ext_resource type="Texture2D" uid="uid://bwovv3p4kid06" path="res://art/Dyr/Page5.jpeg" id="6_bbqup"]
+[ext_resource type="Texture2D" uid="uid://cd01fd51rv7dp" path="res://art/Dyr/Page6.jpeg" id="7_6qy3r"]
+[ext_resource type="Texture2D" uid="uid://e4gbwr0by4m7" path="res://art/Dyr/Page4.jpeg" id="8_usd5l"]
 [ext_resource type="PackedScene" uid="uid://dkrhjlbk4ncdt" path="res://forladknap.tscn" id="9_m3vir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgx4y"]
+size = Vector2(134.799, 117.005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxcpb"]
+size = Vector2(130.775, 117.005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg2wj"]
+size = Vector2(130.775, 114.953)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmsgp"]
+size = Vector2(132.787, 114.953)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwtfo"]
+size = Vector2(131.781, 117.005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dh7ef"]
+size = Vector2(131.781, 115.979)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(0.994075, 0.974315)
@@ -30,7 +49,7 @@ offset_left = 89.5305
 offset_top = 86.2144
 offset_right = 222.53
 offset_bottom = 202.214
-texture = ExtResource("3_mboms")
+texture = ExtResource("3_wnakq")
 
 [node name="Koplads" parent="." instance=ExtResource("2_nkcvn")]
 self_modulate = Color(1, 1, 1, 0.294118)
@@ -50,12 +69,19 @@ offset_right = 83.3159
 offset_bottom = 70.1599
 text = "Ko"
 
+[node name="Area2D" type="Area2D" parent="Koplads"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Koplads/Area2D"]
+position = Vector2(66.3933, 58.5029)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_rgx4y")
+
 [node name="Hestfigur" parent="." instance=ExtResource("2_nkcvn")]
 offset_left = 428.539
 offset_top = 86.2144
 offset_right = 561.539
 offset_bottom = 202.214
-texture = ExtResource("4_kes46")
+texture = ExtResource("4_jllfj")
 
 [node name="Hestplads" parent="." instance=ExtResource("2_nkcvn")]
 self_modulate = Color(1, 1, 1, 0.294118)
@@ -71,13 +97,21 @@ offset_top = 47.2127
 offset_right = 86.2742
 offset_bottom = 70.2127
 text = "Hest"
+script = ExtResource("5_eol7e")
+
+[node name="Area2D" type="Area2D" parent="Hestplads"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hestplads/Area2D"]
+position = Vector2(65.387, 58.5025)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vxcpb")
 
 [node name="Fårfigur" parent="." instance=ExtResource("2_nkcvn")]
 offset_left = 598.546
 offset_top = 87.2408
 offset_right = 731.546
 offset_bottom = 203.241
-texture = ExtResource("5_kaaaf")
+texture = ExtResource("5_boamj")
 
 [node name="Fårplads" parent="." instance=ExtResource("2_nkcvn")]
 self_modulate = Color(1, 1, 1, 0.294118)
@@ -94,12 +128,19 @@ offset_right = 91.304
 offset_bottom = 70.2127
 text = "Får"
 
+[node name="Area2D" type="Area2D" parent="Fårplads"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fårplads/Area2D"]
+position = Vector2(66.3937, 58.5027)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vg2wj")
+
 [node name="Fuglfigur" parent="." instance=ExtResource("2_nkcvn")]
 offset_left = 930.513
 offset_top = 87.2408
 offset_right = 1063.51
 offset_bottom = 203.241
-texture = ExtResource("7_lj2gy")
+texture = ExtResource("6_bbqup")
 
 [node name="Fuglplads" parent="." instance=ExtResource("2_nkcvn")]
 self_modulate = Color(1, 1, 1, 0.294118)
@@ -116,12 +157,19 @@ offset_right = 85.2682
 offset_bottom = 70.2126
 text = "Fugl"
 
+[node name="Area2D" type="Area2D" parent="Fuglplads"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fuglplads/Area2D"]
+position = Vector2(67.3991, 58.503)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_cmsgp")
+
 [node name="Grisfigur" parent="." instance=ExtResource("2_nkcvn")]
 offset_left = 261.55
 offset_top = 84.1617
 offset_right = 394.55
 offset_bottom = 200.162
-texture = ExtResource("8_ekjky")
+texture = ExtResource("7_6qy3r")
 
 [node name="Grisplads" parent="." instance=ExtResource("2_nkcvn")]
 self_modulate = Color(1, 1, 1, 0.294118)
@@ -138,12 +186,19 @@ offset_right = 89.292
 offset_bottom = 70.2126
 text = "Gris"
 
+[node name="Area2D" type="Area2D" parent="Grisplads"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grisplads/Area2D"]
+position = Vector2(65.8908, 58.5031)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_cwtfo")
+
 [node name="Hundfigur" parent="." instance=ExtResource("2_nkcvn")]
 offset_left = 765.536
 offset_top = 89.2935
 offset_right = 898.536
 offset_bottom = 205.294
-texture = ExtResource("6_2c4vw")
+texture = ExtResource("8_usd5l")
 
 [node name="Hundplads" parent="." instance=ExtResource("2_nkcvn")]
 self_modulate = Color(1, 1, 1, 0.294118)
@@ -159,6 +214,13 @@ offset_top = 45.16
 offset_right = 86.2563
 offset_bottom = 68.16
 text = "Hund"
+
+[node name="Area2D" type="Area2D" parent="Hundplads"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hundplads/Area2D"]
+position = Vector2(66.8963, 57.9892)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_dh7ef")
 
 [node name="Node2D" parent="." instance=ExtResource("9_m3vir")]
 position = Vector2(1005.96, -49.2654)
