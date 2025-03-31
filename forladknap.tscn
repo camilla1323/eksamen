@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkrhjlbk4ncdt"]
+
+[ext_resource type="Script" path="res://forladknap.gd" id="1_obwv4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_reras"]
+load_path = "res://.godot/imported/Door1.png-84eb0605ad6557854878279dc3b918e8.ctex"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_obwv4")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 93.0
+offset_top = 60.0
+offset_right = 190.0
+offset_bottom = 218.0
+scale = Vector2(0.4, 0.3)
+icon = SubResource("CompressedTexture2D_reras")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
