@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://77k1wab2pa"]
-
-[ext_resource type="Script" path="res://dyr_spil.gd" id="1_2y50q"]
+[gd_scene format=3 uid="uid://77k1wab2pa"]
 
 [node name="Node2D" type="TextureRect"]
 custom_minimum_size = Vector2(70, 70)
@@ -9,7 +7,6 @@ offset_top = 47.0
 offset_right = 241.0
 offset_bottom = 187.0
 expand_mode = 1
-script = ExtResource("1_2y50q")
 
 [node name="Panel" type="Panel" parent="."]
 show_behind_parent = true
