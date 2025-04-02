@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://c1slt7nrl1gfc"]
+[gd_scene load_steps=17 format=3 uid="uid://c1slt7nrl1gfc"]
 
+[ext_resource type="Script" path="res://tal.gd" id="1_5fufh"]
 [ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_fgcos"]
 [ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="2_fo2m2"]
 [ext_resource type="PackedScene" uid="uid://cb27xncrrmin" path="res://1_tal.tscn" id="3_130t8"]
@@ -17,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dkoxyliyf38ap" path="res://art/Tal/fersken.png" id="15_8164b"]
 
 [node name="Tal" type="Node" groups=["game_manager"]]
+script = ExtResource("1_5fufh")
 
 [node name="Baggrund" type="Sprite2D" parent="."]
 position = Vector2(581, 354)

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtk2o868blqyk"]
+
+[ext_resource type="Texture2D" uid="uid://bd3gwo6pontgy" path="res://art/Former/Page 4.png" id="1_fwvxg"]
+[ext_resource type="Script" path="res://halvcirkel_form.gd" id="2_ji8xp"]
+
+[node name="Cirkel" type="Sprite2D"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_fwvxg")
+script = ExtResource("2_ji8xp")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.368
+anchor_top = 0.201
+anchor_right = 0.678
+anchor_bottom = 0.888
+offset_left = -590.44
+offset_top = -590.08
+offset_right = -525.24
+offset_bottom = -586.04
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

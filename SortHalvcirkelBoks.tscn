@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cysmau6du0he8"]
+
+[ext_resource type="Texture2D" uid="uid://bd3gwo6pontgy" path="res://art/Former/Page 4.png" id="1_ryvtb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7o4pu"]
+radius = 205.882
+height = 776.471
+
+[node name="SortHalvcirkelBoks" type="Sprite2D"]
+self_modulate = Color(0, 0, 0, 0.705882)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("1_ryvtb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41.1765, -17.6471)
+shape = SubResource("CapsuleShape2D_7o4pu")
