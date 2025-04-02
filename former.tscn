@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cnwtihubsajyw"]
+[gd_scene load_steps=15 format=3 uid="uid://cnwtihubsajyw"]
 
 [ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_gjccq"]
 [ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="2_bm47o"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://2lljmc2pcfq0" path="res://SortRektangelBoks.tscn" id="10_ecurg"]
 [ext_resource type="PackedScene" uid="uid://wo25pjcsq6ux" path="res://stjerne_form.tscn" id="11_hlpym"]
 [ext_resource type="PackedScene" uid="uid://bl0ygd76y3r1s" path="res://SortStjerneBoks.tscn" id="12_hdf0a"]
+[ext_resource type="PackedScene" uid="uid://dtk2o868blqyk" path="res://halvcirkel_form.tscn" id="13_v37np"]
+[ext_resource type="PackedScene" uid="uid://cysmau6du0he8" path="res://SortHalvcirkelBoks.tscn" id="14_b1hcu"]
 
 [node name="Former" type="Node"]
 
@@ -36,6 +38,72 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
 text = "Træk formerne ovenover ned til deres plads"
 
+[node name="TrekantTekst" type="Label" parent="."]
+offset_left = 163.0
+offset_top = 259.0
+offset_right = 276.0
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Trekant"
+
+[node name="FirkantTekst" type="Label" parent="."]
+offset_left = 510.0
+offset_top = 294.0
+offset_right = 623.0
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Firkant"
+
+[node name="RektangelTekst" type="Label" parent="."]
+offset_left = 274.0
+offset_top = 470.0
+offset_right = 418.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Rektangel"
+
+[node name="CirkelTekst" type="Label" parent="."]
+offset_left = 708.0
+offset_top = 472.0
+offset_right = 791.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Cirkel"
+
+[node name="StjerneTekst" type="Label" parent="."]
+offset_left = 996.0
+offset_top = 381.0
+offset_right = 1099.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Stjerne"
+
+[node name="HalvcirkelTekst" type="Label" parent="."]
+offset_left = 789.0
+offset_top = 288.0
+offset_right = 932.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Halvcirkel"
+
 [node name="SortFirkantBoks" parent="." groups=["sort_firkant"] instance=ExtResource("4_6iek6")]
 position = Vector2(564, 401)
 
@@ -43,25 +111,31 @@ position = Vector2(564, 401)
 position = Vector2(217, 360)
 
 [node name="SortCirkelBoks" parent="." groups=["sort_cirkel"] instance=ExtResource("8_md84g")]
-position = Vector2(883, 527)
+position = Vector2(747, 572)
 
 [node name="SortRektangelBoks" parent="." groups=["sort_rektangel"] instance=ExtResource("10_ecurg")]
 position = Vector2(347, 561)
 
 [node name="SortStjerneBoks" parent="." groups=["sort_stjerne"] instance=ExtResource("12_hdf0a")]
-position = Vector2(1056, 428)
+position = Vector2(1046, 486)
+
+[node name="SortHalvcirkelBoks" parent="." groups=["sort_halvcirkel"] instance=ExtResource("14_b1hcu")]
+position = Vector2(849, 402)
 
 [node name="Trekant" parent="." instance=ExtResource("3_2knxu")]
 position = Vector2(222, 114)
 
 [node name="Firkant" parent="." instance=ExtResource("4_is548")]
-position = Vector2(334, 116)
+position = Vector2(356, 117)
 
 [node name="Cirkel" parent="." instance=ExtResource("7_y2gov")]
-position = Vector2(446, 115)
+position = Vector2(501, 117)
 
 [node name="Rektangel" parent="." instance=ExtResource("9_3e3mk")]
-position = Vector2(577, 118)
+position = Vector2(663, 119)
 
 [node name="Stjerne" parent="." instance=ExtResource("11_hlpym")]
-position = Vector2(706, 115)
+position = Vector2(817, 115)
+
+[node name="Cirkel2" parent="." instance=ExtResource("13_v37np")]
+position = Vector2(922, 116)
