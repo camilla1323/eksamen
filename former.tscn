@@ -1,9 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://cnwtihubsajyw"]
+[gd_scene load_steps=17 format=3 uid="uid://cnwtihubsajyw"]
 
+[ext_resource type="Script" path="res://former.gd" id="1_846vd"]
 [ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_gjccq"]
 [ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="2_bm47o"]
 [ext_resource type="PackedScene" uid="uid://bu0l808goky6g" path="res://SortTrekantBoks.tscn" id="3_1ciqy"]
 [ext_resource type="PackedScene" uid="uid://c5rlaf4m5pfti" path="res://trekant_form.tscn" id="3_2knxu"]
+[ext_resource type="Texture2D" uid="uid://cciljmrxobp3a" path="res://art/Door1.png" id="3_6vqvb"]
 [ext_resource type="PackedScene" uid="uid://boof24vq685bd" path="res://SortFirkantBoks.tscn" id="4_6iek6"]
 [ext_resource type="PackedScene" uid="uid://ntkmk3gig41b" path="res://firkant_form.tscn" id="4_is548"]
 [ext_resource type="PackedScene" uid="uid://clpk5vntulq3w" path="res://cirkel_form.tscn" id="7_y2gov"]
@@ -16,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cysmau6du0he8" path="res://SortHalvcirkelBoks.tscn" id="14_b1hcu"]
 
 [node name="Former" type="Node"]
+script = ExtResource("1_846vd")
 
 [node name="Baggrund" type="Sprite2D" parent="."]
 position = Vector2(581, 354)
@@ -104,6 +107,11 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "Halvcirkel"
 
+[node name="Tilbage knap" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("3_6vqvb")
+
 [node name="SortFirkantBoks" parent="." groups=["sort_firkant"] instance=ExtResource("4_6iek6")]
 position = Vector2(564, 401)
 
@@ -139,3 +147,5 @@ position = Vector2(817, 115)
 
 [node name="Cirkel2" parent="." instance=ExtResource("13_v37np")]
 position = Vector2(922, 116)
+
+[connection signal="pressed" from="Tilbage knap" to="." method="_on_tilbage_knap_pressed"]
