@@ -7,10 +7,10 @@
 [ext_resource type="Script" path="res://dyrfigurer.gd" id="6_0vxkd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6q2k"]
-size = Vector2(153.912, 111.874)
+size = Vector2(154.918, 111.874)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyfho"]
-size = Vector2(155.391, 111.742)
+size = Vector2(155.391, 117.005)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(0.994075, 0.974315)
@@ -35,13 +35,18 @@ scale = Vector2(0.162564, 0.14777)
 texture = ExtResource("4_ansr1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kofigur"]
-position = Vector2(158.439, 141.125)
+position = Vector2(157.936, 141.125)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_m6q2k")
 
+[node name="FeedbackLabel" type="Label" parent="Kofigur"]
+offset_left = 415.462
+offset_top = 284.302
+offset_right = 455.462
+offset_bottom = 307.302
+
 [node name="Koplads" type="Area2D" parent="."]
 position = Vector2(159.948, 421.835)
-scale = Vector2(1, 1)
 script = ExtResource("4_n4x3f")
 
 [node name="Sprite2D" type="Sprite2D" parent="Koplads"]
@@ -51,6 +56,6 @@ scale = Vector2(0.166293, 0.154907)
 texture = ExtResource("4_ansr1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Koplads"]
-position = Vector2(1.00598, 1.52588e-05)
+position = Vector2(1.00598, -0.00012207)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xyfho")
