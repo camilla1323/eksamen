@@ -1,51 +1,52 @@
 extends Area2D
 
-@export var correct_box: NodePath  # Reference til den korrekte boks
-var start_position: Vector2  # Gemmer startpositionen
-var dragging: bool = false  # Om figuren bliver trukket
-@onready var feedback_label = $FeedbackLabel  # Henter Label-node
+@export var correct_box: NodePath  # Fx "../Plads"
+var start_position: Vector2
+var dragging := false
+
+@onready var feedback_label: Label = $FeedbackLabel
 
 func _ready():
-	start_position = global_position  # Husker startpositionen
-	feedback_label.text = ""  # Start med tom tekst
+	start_position = global_position
+	feedback_label.text = ""
 
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton:
-		if event.pressed and is_mouse_over():  # Klik på figuren
-			dragging = true
-		elif !event.pressed:  # Musen slippes
-			dragging = false
-			check_placement()
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				# Tjek om musen klikker på denne figur
+				var space_state = get_world_2d().direct_space_state
+				var query = PhysicsPointQueryParameters2D.new()
+				query.position = get_global_mouse_position()
+				query.collide_with_areas = true
+				var results = space_state.intersect_point(query)
 
-	if event is InputEventMouseMotion and dragging:
-		global_position = get_viewport().get_mouse_position()  # Flyt figuren til musens position
+				for result in results:
+					if result.collider == self:
+						dragging = true
+						break
+			else:
+				# Musen er sluppet – stop med at trække og tjek placering
+				if dragging:
+					dragging = false
+					check_placement()
 
-func is_mouse_over() -> bool:
-	var space_state = get_world_2d().direct_space_state
-	var mouse_pos = get_viewport().get_mouse_position()
-	var query = PhysicsPointQueryParameters2D.new()
-	query.position = mouse_pos
-	query.collision_mask = collision_layer  # Sørger for, at vi tjekker det rigtige lag
-
-	var result = space_state.intersect_point(query)
-	for r in result:
-		if r.collider == self:
-			return true
-	return false
+	elif event is InputEventMouseMotion and dragging:
+		global_position = get_global_mouse_position()
 
 func check_placement():
 	if correct_box == null or correct_box.is_empty():
-		feedback_label.text = "❌ Fejl: Mangler correct_box!"
+		feedback_label.text = "❌ Mangler korrekt målområde!"
 		return
 
-	var correct_boks = get_node(correct_box)
-	if not correct_boks:
-		feedback_label.text = "❌ Fejl: Kan ikke finde boksen!"
+	var box = get_node(correct_box)
+	if not box:
+		feedback_label.text = "❌ Kunne ikke finde boksen!"
 		return
 
-	if correct_boks.get_overlapping_areas().has(self):
-		global_position = correct_boks.global_position  # Snap til korrekt placering
-		feedback_label.text = "✅ Korrekt placering!"
+	if box is Area2D and box.get_overlapping_areas().has(self):
+		global_position = box.global_position
+		feedback_label.text = "✅ Korrekt!"
 	else:
-		global_position = start_position  # Gå tilbage til start hvis forkert
-		feedback_label.text = "❌ Forkert placering, prøv igen!"
+		global_position = start_position
+		feedback_label.text = "❌ Forkert placering!"
