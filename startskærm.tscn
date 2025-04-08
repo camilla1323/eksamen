@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://dth4nx0fruans"]
+
+[ext_resource type="Script" path="res://startskærm.gd" id="1_bls4o"]
+[ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_ufh25"]
+[ext_resource type="Texture2D" uid="uid://bsp5a1g33neip" path="res://art/Forside/former.png" id="2_mvf02"]
+[ext_resource type="Texture2D" uid="uid://c3gr4juvpqvjw" path="res://art/Forside/tal.png" id="3_tne5n"]
+[ext_resource type="Texture2D" uid="uid://de5rpqdrdn8dl" path="res://art/Forside/exit.png" id="4_bj4c6"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_bls4o")
+
+[node name="Baggrund" type="Sprite2D" parent="."]
+position = Vector2(570, 330)
+scale = Vector2(2.48333, 1.90556)
+texture = ExtResource("1_ufh25")
+
+[node name="Titel" type="Label" parent="."]
+offset_left = 120.0
+offset_top = 100.0
+offset_right = 1009.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 75
+text = "Opdag former, tal og dyr"
+
+[node name="Former" type="Label" parent="."]
+offset_left = 164.0
+offset_top = 265.0
+offset_right = 323.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 45
+text = "Former"
+
+[node name="Tal" type="Label" parent="."]
+offset_left = 523.0
+offset_top = 265.0
+offset_right = 682.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 45
+text = "Tal"
+
+[node name="Dyr" type="Label" parent="."]
+offset_left = 827.0
+offset_top = 265.0
+offset_right = 986.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 45
+text = "Dyr"
+
+[node name="former" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.109
+anchor_top = 0.441
+anchor_right = 0.321
+anchor_bottom = 0.805
+offset_left = 0.431992
+offset_top = 44.232
+offset_right = 264.208
+offset_bottom = 316.36
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("2_mvf02")
+
+[node name="tal" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.392
+anchor_top = 0.441
+anchor_right = 0.594
+anchor_bottom = 0.805
+offset_left = -11.584
+offset_top = 44.232
+offset_right = 263.712
+offset_bottom = 316.36
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("3_tne5n")
+
+[node name="dyr" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.663
+anchor_top = 0.441
+anchor_right = 0.861
+anchor_bottom = 0.798
+offset_left = -13.7761
+offset_top = 44.232
+offset_right = 266.128
+offset_bottom = 320.896
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("3_tne5n")
+
+[node name="exit" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.002
+anchor_top = 0.007
+anchor_right = 0.064
+anchor_bottom = 0.113
+offset_left = -2.304
+offset_top = -4.536
+offset_right = 434.272
+offset_bottom = 434.776
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("4_bj4c6")
+
+[node name="Infoknap" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.88
+anchor_top = 0.006
+anchor_right = 1.0
+anchor_bottom = 0.116
+offset_left = -4.76007
+offset_top = -3.888
+offset_bottom = 3.832
+theme_override_font_sizes/font_size = 45
+text = "Info"
+
+[connection signal="pressed" from="former" to="." method="_on_former_pressed"]
+[connection signal="pressed" from="tal" to="." method="_on_tal_pressed"]
+[connection signal="pressed" from="dyr" to="." method="_on_dyr_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Infoknap" to="." method="_on_infoknap_pressed"]

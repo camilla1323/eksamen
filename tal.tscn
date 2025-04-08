@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://c1slt7nrl1gfc"]
+[gd_scene load_steps=18 format=3 uid="uid://c1slt7nrl1gfc"]
 
 [ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="1_fgcos"]
+[ext_resource type="Script" path="res://tal.gd" id="1_hqubx"]
 [ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="2_fo2m2"]
 [ext_resource type="PackedScene" uid="uid://cb27xncrrmin" path="res://1_tal.tscn" id="3_130t8"]
 [ext_resource type="PackedScene" uid="uid://boof24vq685bd" path="res://SortFirkantBoks.tscn" id="3_q532l"]
@@ -15,8 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://bfhm5vn12kmwi" path="res://art/Tal/jordbær.png" id="13_pas5t"]
 [ext_resource type="Texture2D" uid="uid://cv2xp66he73ab" path="res://art/Tal/brombær.png" id="14_mk8w4"]
 [ext_resource type="Texture2D" uid="uid://dkoxyliyf38ap" path="res://art/Tal/fersken.png" id="15_8164b"]
+[ext_resource type="Texture2D" uid="uid://cciljmrxobp3a" path="res://art/Door1.png" id="16_qhaqv"]
 
 [node name="Tal" type="Node" groups=["game_manager"]]
+script = ExtResource("1_hqubx")
 
 [node name="Baggrund" type="Sprite2D" parent="."]
 position = Vector2(581, 354)
@@ -38,6 +41,14 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
 text = "Træk tallene ovenover ned til deres plads"
+
+[node name="Tilbage knap" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.08
+anchor_bottom = 0.235
+offset_right = 4.84
+offset_bottom = 5.71999
+icon = ExtResource("16_qhaqv")
 
 [node name="Æble" type="Sprite2D" parent="."]
 position = Vector2(902, 508)
@@ -110,3 +121,5 @@ position = Vector2(770, 110)
 
 [node name="6-tal" parent="." instance=ExtResource("10_siq4g")]
 position = Vector2(905, 107)
+
+[connection signal="pressed" from="Tilbage knap" to="." method="_on_tilbage_knap_pressed"]
