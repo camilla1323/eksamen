@@ -50,8 +50,16 @@ offset_right = 4.84
 offset_bottom = 5.71999
 icon = ExtResource("16_qhaqv")
 
+[node name="Hjælp knap" type="Button" parent="."]
+offset_left = 1016.0
+offset_top = 578.0
+offset_right = 1151.0
+offset_bottom = 649.0
+theme_override_font_sizes/font_size = 45
+text = "Hjælp"
+
 [node name="Æble" type="Sprite2D" parent="."]
-position = Vector2(902, 508)
+position = Vector2(895, 484)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_majjj")
 
@@ -89,7 +97,7 @@ position = Vector2(288, 535)
 scale = Vector2(0.154444, 0.213704)
 
 [node name="ÆbleBoks" parent="." groups=["æble"] instance=ExtResource("3_q532l")]
-position = Vector2(1028, 521)
+position = Vector2(1024, 490)
 scale = Vector2(0.154444, 0.213704)
 
 [node name="BrombærBoks" parent="." groups=["brombær"] instance=ExtResource("3_q532l")]
@@ -123,3 +131,4 @@ position = Vector2(770, 110)
 position = Vector2(905, 107)
 
 [connection signal="pressed" from="Tilbage knap" to="." method="_on_tilbage_knap_pressed"]
+[connection signal="pressed" from="Hjælp knap" to="." method="_on_hjælp_knap_pressed"]

@@ -112,6 +112,19 @@ offset_right = 8.0
 offset_bottom = 8.0
 icon = ExtResource("3_6vqvb")
 
+[node name="Hjælp knap" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.888
+anchor_top = 0.898
+anchor_right = 0.997
+anchor_bottom = 0.993
+offset_left = -4.97607
+offset_top = -3.90405
+offset_right = 4.45593
+offset_bottom = 5.53601
+theme_override_font_sizes/font_size = 45
+text = "Hjælp"
+
 [node name="SortFirkantBoks" parent="." groups=["sort_firkant"] instance=ExtResource("4_6iek6")]
 position = Vector2(564, 401)
 
@@ -149,3 +162,4 @@ position = Vector2(817, 115)
 position = Vector2(922, 116)
 
 [connection signal="pressed" from="Tilbage knap" to="." method="_on_tilbage_knap_pressed"]
+[connection signal="pressed" from="Hjælp knap" to="." method="_on_hjælp_knap_pressed"]

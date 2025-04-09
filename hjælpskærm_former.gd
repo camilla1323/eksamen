@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,11 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_startskærm_knap_pressed() -> void:
-	print("Info button was pressed!")  # Debugging message
-	get_tree().change_scene_to_file("res://startskærm.tscn")
-
-
-func _on_spil_igen_knap_pressed() -> void:
-	print("Info button was pressed!")  # Debugging message
+func _on_tilabgeknap_pressed() -> void:
 	get_tree().change_scene_to_file("res://former.tscn")

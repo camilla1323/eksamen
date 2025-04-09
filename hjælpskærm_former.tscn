@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmuuyhdh51f1b"]
+
+[ext_resource type="Script" path="res://hjælpskærm_former.gd" id="1_h3473"]
+[ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="2_s6lql"]
+
+[node name="Infoskærm" type="CanvasLayer"]
+script = ExtResource("1_h3473")
+
+[node name="Baggrund" type="Sprite2D" parent="."]
+position = Vector2(570, 330)
+scale = Vector2(2.48333, 1.90556)
+texture = ExtResource("2_s6lql")
+
+[node name="Titel" type="Label" parent="."]
+offset_left = 315.0
+offset_top = 102.0
+offset_right = 867.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 75
+text = "Brug for hjælp?"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -424.0
+offset_top = -76.0
+offset_right = 424.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.466667)
+
+[node name="Tekst" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.151
+anchor_top = 0.414
+anchor_right = 0.856
+anchor_bottom = 0.606
+offset_left = -11.952
+offset_top = -15.272
+offset_right = 12.8879
+offset_bottom = 15.312
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Træk formerne i den øverste boks ned til deres plads. Du ved formen
+sidder det rigtige sted når den selv sætter sig i formen."
+
+[node name="Tilabgeknap" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.408
+anchor_top = 0.705
+anchor_right = 0.591
+anchor_bottom = 0.791
+offset_left = -7.01602
+offset_top = -6.84003
+offset_right = 8.16797
+offset_bottom = 8.43201
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+text = "Gå tilbage"
+
+[connection signal="pressed" from="Tilabgeknap" to="." method="_on_tilabgeknap_pressed"]
