@@ -18,8 +18,8 @@ anchor_right = 0.782
 anchor_bottom = 0.795
 offset_left = -558.04
 offset_top = -565.12
-offset_right = -516.56
-offset_bottom = -528.6
+offset_right = -517.56
+offset_bottom = -520.6
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
