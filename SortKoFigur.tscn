@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://pqnuh5723pqq"]
+
+[ext_resource type="Texture2D" uid="uid://sg7a35e5igq2" path="res://art/Dyr/Page2.jpeg" id="1_88atw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cvug"]
+size = Vector2(947.059, 752.941)
+
+[node name="SortCirkelBoks" type="Sprite2D"]
+self_modulate = Color(0.503375, 0.503375, 0.503375, 0.733333)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("1_88atw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.94116, -5.8824)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7cvug")

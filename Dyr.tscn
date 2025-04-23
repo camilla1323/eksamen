@@ -1,7 +1,65 @@
-[gd_scene load_steps=2 format=3 uid="uid://p5ieq62r7non"]
+[gd_scene load_steps=9 format=3 uid="uid://br5jq5hlv5j2t"]
 
-[ext_resource type="PackedScene" uid="uid://dblt0lm7cc7eo" path="res://flytningdyr.tscn" id="1_4sfnc"]
+[ext_resource type="Script" path="res://tal.gd" id="1_l1d85"]
+[ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="2_7vndw"]
+[ext_resource type="PackedScene" uid="uid://c40mxdad7w1o7" path="res://får_dyr.tscn" id="2_q04ob"]
+[ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="3_f8bc3"]
+[ext_resource type="Texture2D" uid="uid://cciljmrxobp3a" path="res://art/Door1.png" id="4_cce82"]
+[ext_resource type="PackedScene" uid="uid://cpm8xn3uwnli4" path="res://SortFårFigur.tscn" id="5_vx4aj"]
+[ext_resource type="PackedScene" uid="uid://bay4vpgc5qvnm" path="res://ko_dyr.tscn" id="6_lhjxn"]
+[ext_resource type="PackedScene" uid="uid://pqnuh5723pqq" path="res://SortKoFigur.tscn" id="7_w68su"]
 
-[node name="Node2D" type="Node"]
+[node name="Tal" type="Node" groups=["game_manager"]]
+script = ExtResource("1_l1d85")
 
-[node name="Node2D" parent="." instance=ExtResource("1_4sfnc")]
+[node name="Baggrund" type="Sprite2D" parent="."]
+position = Vector2(581, 354)
+scale = Vector2(2.67292, 2.05278)
+texture = ExtResource("2_7vndw")
+
+[node name="Boks" type="Sprite2D" parent="."]
+position = Vector2(572, 116)
+scale = Vector2(0.507387, 0.157143)
+texture = ExtResource("3_f8bc3")
+
+[node name="Tekst" type="Label" parent="."]
+offset_left = 117.0
+offset_top = 180.0
+offset_right = 1070.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "Træk tallene ovenover ned til deres plads"
+
+[node name="Tilbage knap" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.08
+anchor_bottom = 0.235
+offset_right = 4.84
+offset_bottom = 5.71999
+icon = ExtResource("4_cce82")
+
+[node name="Hjælp knap" type="Button" parent="."]
+offset_left = 1016.0
+offset_top = 578.0
+offset_right = 1151.0
+offset_bottom = 649.0
+theme_override_font_sizes/font_size = 45
+text = "Hjælp"
+
+[node name="SortFårFigur" parent="." groups=["SortFårFigur"] instance=ExtResource("5_vx4aj")]
+position = Vector2(475, 325)
+
+[node name="SortKoFigur" parent="." groups=["SortKoFigur"] instance=ExtResource("7_w68su")]
+position = Vector2(250, 476)
+
+[node name="Ko" parent="." instance=ExtResource("6_lhjxn")]
+position = Vector2(278, 114)
+
+[node name="Får" parent="." instance=ExtResource("2_q04ob")]
+position = Vector2(460, 111)
+
+[connection signal="pressed" from="Tilbage knap" to="." method="_on_tilbage_knap_pressed"]
+[connection signal="pressed" from="Hjælp knap" to="." method="_on_hjælp_knap_pressed"]
