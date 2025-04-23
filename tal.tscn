@@ -58,11 +58,6 @@ offset_bottom = 649.0
 theme_override_font_sizes/font_size = 45
 text = "Hjælp"
 
-[node name="Æble" type="Sprite2D" parent="."]
-position = Vector2(895, 484)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("8_majjj")
-
 [node name="Banan" type="Sprite2D" parent="."]
 position = Vector2(83, 312)
 scale = Vector2(0.3, 0.3)
@@ -73,10 +68,10 @@ position = Vector2(165, 493)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_vy7vi")
 
-[node name="Jordbær" type="Sprite2D" parent="."]
-position = Vector2(811, 279)
-scale = Vector2(0.26, 0.26)
-texture = ExtResource("13_pas5t")
+[node name="Æble" type="Sprite2D" parent="."]
+position = Vector2(895, 484)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_majjj")
 
 [node name="Brombær" type="Sprite2D" parent="."]
 position = Vector2(515, 517)
@@ -87,6 +82,11 @@ texture = ExtResource("14_mk8w4")
 position = Vector2(471, 299)
 scale = Vector2(0.27, 0.27)
 texture = ExtResource("15_8164b")
+
+[node name="Jordbær" type="Sprite2D" parent="."]
+position = Vector2(811, 279)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("13_pas5t")
 
 [node name="BananBoks" parent="." groups=["banan"] instance=ExtResource("3_q532l")]
 position = Vector2(187, 328)
