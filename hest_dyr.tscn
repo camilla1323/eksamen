@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c614kgm0htlma"]
+
+[ext_resource type="Texture2D" uid="uid://crjxd0ok44k3d" path="res://art/Dyr/Page1.jpeg" id="1_r7a2b"]
+[ext_resource type="Script" path="res://firkant_form.gd" id="2_i7blh"]
+
+[node name="Firkant" type="Sprite2D"]
+position = Vector2(253.95, 142.375)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_r7a2b")
+script = ExtResource("2_i7blh")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.213
+anchor_top = 0.214
+anchor_right = 0.782
+anchor_bottom = 0.795
+offset_left = -558.04
+offset_top = -565.12
+offset_right = -516.56
+offset_bottom = -528.6
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
