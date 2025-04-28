@@ -18,7 +18,7 @@ func _on_button_button_up():
 	check_snap()
 
 func check_snap():
-	for area in get_tree().get_nodes_in_group("SortKoFigur"): # Skift til den rigtige gruppe
+	for area in get_tree().get_nodes_in_group("SortHestFigur"): # Skift til den rigtige gruppe
 		if global_position.distance_to(area.global_position) < 80:  # Snap-afstand
 			global_position = area.global_position
 			return  # Stop efter første match

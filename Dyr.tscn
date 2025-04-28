@@ -1,16 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://br5jq5hlv5j2t"]
+[gd_scene load_steps=17 format=3 uid="uid://br5jq5hlv5j2t"]
 
-[ext_resource type="Script" path="res://tal.gd" id="1_l1d85"]
+[ext_resource type="Script" path="res://dyr.gd" id="1_rjylj"]
 [ext_resource type="Texture2D" uid="uid://dn82d3urnd7e7" path="res://art/Baggrund/360_F_44540911_QCDKX0tEkoDp56Xtnwtl5SXeXZIiunvB.jpg" id="2_7vndw"]
 [ext_resource type="PackedScene" uid="uid://c40mxdad7w1o7" path="res://får_dyr.tscn" id="2_q04ob"]
 [ext_resource type="Texture2D" uid="uid://4du2t2rhl1rx" path="res://art/Baggrund/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg" id="3_f8bc3"]
 [ext_resource type="Texture2D" uid="uid://cciljmrxobp3a" path="res://art/Door1.png" id="4_cce82"]
 [ext_resource type="PackedScene" uid="uid://cpm8xn3uwnli4" path="res://SortFårFigur.tscn" id="5_vx4aj"]
 [ext_resource type="PackedScene" uid="uid://bay4vpgc5qvnm" path="res://ko_dyr.tscn" id="6_lhjxn"]
+[ext_resource type="PackedScene" uid="uid://dekjo52cx371t" path="res://SortHestFigur.tscn" id="7_6av5s"]
 [ext_resource type="PackedScene" uid="uid://pqnuh5723pqq" path="res://SortKoFigur.tscn" id="7_w68su"]
+[ext_resource type="Texture2D" uid="uid://crjxd0ok44k3d" path="res://art/Dyr/Page1.jpeg" id="8_a27jj"]
+[ext_resource type="PackedScene" uid="uid://buj0olok6wpce" path="res://SortGrisFigur.tscn" id="9_jxac2"]
+[ext_resource type="Texture2D" uid="uid://cd01fd51rv7dp" path="res://art/Dyr/Page6.jpeg" id="10_e4r3m"]
+[ext_resource type="PackedScene" uid="uid://c614kgm0htlma" path="res://hest_dyr.tscn" id="11_s38et"]
+[ext_resource type="Script" path="res://hest_dyr.gd" id="12_tlgvy"]
+[ext_resource type="PackedScene" uid="uid://bax8eyom3u5rg" path="res://gris_dyr.tscn" id="15_etups"]
+[ext_resource type="Script" path="res://gris_dyr.gd" id="16_6jrc6"]
 
 [node name="Tal" type="Node" groups=["game_manager"]]
-script = ExtResource("1_l1d85")
+script = ExtResource("1_rjylj")
 
 [node name="Baggrund" type="Sprite2D" parent="."]
 position = Vector2(581, 354)
@@ -31,7 +39,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
-text = "Træk tallene ovenover ned til deres plads"
+text = "Træk dyrene ovenover ned til deres plads"
 
 [node name="Tilbage knap" type="Button" parent="."]
 anchors_preset = -1
@@ -50,16 +58,32 @@ theme_override_font_sizes/font_size = 45
 text = "Hjælp"
 
 [node name="SortFårFigur" parent="." groups=["SortFårFigur"] instance=ExtResource("5_vx4aj")]
-position = Vector2(475, 325)
+position = Vector2(869, 333)
 
 [node name="SortKoFigur" parent="." groups=["SortKoFigur"] instance=ExtResource("7_w68su")]
-position = Vector2(250, 476)
+position = Vector2(605, 415)
+
+[node name="SortHestFigur" parent="." groups=["SortHestFigur"] instance=ExtResource("7_6av5s")]
+position = Vector2(242, 328)
+texture = ExtResource("8_a27jj")
+
+[node name="SortCirkelBoks" parent="." groups=["SortGrisFigur"] instance=ExtResource("9_jxac2")]
+position = Vector2(361, 524)
+texture = ExtResource("10_e4r3m")
 
 [node name="Ko" parent="." instance=ExtResource("6_lhjxn")]
 position = Vector2(278, 114)
 
 [node name="Får" parent="." instance=ExtResource("2_q04ob")]
-position = Vector2(460, 111)
+position = Vector2(478, 115)
+
+[node name="Hest" parent="." instance=ExtResource("11_s38et")]
+position = Vector2(670, 117)
+script = ExtResource("12_tlgvy")
+
+[node name="Gris" parent="." instance=ExtResource("15_etups")]
+position = Vector2(858, 116)
+script = ExtResource("16_6jrc6")
 
 [connection signal="pressed" from="Tilbage knap" to="." method="_on_tilbage_knap_pressed"]
 [connection signal="pressed" from="Hjælp knap" to="." method="_on_hjælp_knap_pressed"]
