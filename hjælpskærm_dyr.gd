@@ -1,4 +1,4 @@
 extends CanvasLayer
 
 func _on_tilabgeknap_pressed() -> void:
-	get_tree().change_scene_to_file("res://dyr.tscn")
+	get_tree().change_scene_to_file("res://Dyr.tscn")
