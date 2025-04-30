@@ -20,7 +20,7 @@ func _on_tal_pressed() -> void:
 
 
 func _on_dyr_pressed() -> void:
-	get_tree().change_scene_to_file("res://dyr.tscn")
+	get_tree().change_scene_to_file("res://Dyr.tscn")
 
 
 func _on_exit_pressed() -> void:
